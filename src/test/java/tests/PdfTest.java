@@ -28,12 +28,12 @@ public class PdfTest {
 
     //test for PDF
     @Test
-    void txtChecking() throws IOException {
+    void pdfChecking() throws IOException {
 
         //make File with "path"
         PDF pdf = makePdfFile(path);
 
         //Check string for excepted text
-        assertThat(pdf, containsText(exceptedText));
+        assertThat(pdf, PDF.containsText(exceptedText));
     }
 }

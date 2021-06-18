@@ -1,6 +1,7 @@
 package utils;
 
 import com.codeborne.pdftest.PDF;
+import com.codeborne.xlstest.XLS;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -22,5 +23,11 @@ public class MyFilesActions {
     //make File-object of PDF-type from path
     public static PDF makePdfFile(String path) throws IOException {
         return new PDF(new File(path));
+    }
+
+    //make File-object of XLS-type from path
+    public static XLS makeXlsFile(String path) throws IOException {
+        return new XLS(new File(path));
+
     }
 }
