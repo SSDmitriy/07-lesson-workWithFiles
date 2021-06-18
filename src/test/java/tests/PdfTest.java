@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
-import static com.codeborne.pdftest.PDF.containsText;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static utils.MyFilesActions.makePdfFile;
 
@@ -24,7 +23,7 @@ public class PdfTest {
     String path = "./src/test/resources/pdfForTest.pdf";
 
     //excepted result for PDF
-    String exceptedText = "не нуждается";
+    String expectedText = "не нуждается";
 
     //test for PDF
     @Test
@@ -34,6 +33,6 @@ public class PdfTest {
         PDF pdf = makePdfFile(path);
 
         //Check string for excepted text
-        assertThat(pdf, PDF.containsText(exceptedText));
+        assertThat(pdf, PDF.containsText(expectedText));
     }
 }

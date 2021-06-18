@@ -18,8 +18,8 @@ public class TxtTest {
     //path for TXT
     String path = "./src/test/resources/txtForTest.txt";
 
-    //excepted result for TXT, XLS, XSLX, PDF
-    String exceptedText = "Отличный софт";
+    //excepted result for TXT
+    String expectedText = "Отличный софт";
 
     //test for TXT
     @Test
@@ -30,6 +30,6 @@ public class TxtTest {
         //convert File to string
         String actualText = MyFilesActions.stringFromFile(checkingFile);
         //Check string for excepted text
-        assertThat(actualText, containsString(exceptedText));
+        assertThat(actualText, containsString(expectedText));
     }
 }

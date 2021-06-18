@@ -5,9 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
-import static com.codeborne.pdftest.PDF.containsText;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static utils.MyFilesActions.makePdfFile;
 import static utils.MyFilesActions.makeXlsFile;
 
 //teamplate for XLS
@@ -25,7 +23,7 @@ public class XlsTest {
     String path = "./src/test/resources/xlsForTest.xls";
 
     //excepted result for XLS
-    String exceptedText = "в документации.";
+    String expectedText = "в документации.";
 
     //test for XLS
     @Test
@@ -35,6 +33,6 @@ public class XlsTest {
         XLS xls = makeXlsFile(path);
 
         //Check string for excepted text
-        assertThat(xls, XLS.containsText(exceptedText));
+        assertThat(xls, XLS.containsText(expectedText));
     }
 }
